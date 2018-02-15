@@ -4,6 +4,7 @@ pipeline {
     stage('Dev') {
       steps {
         echo 'test'
+        junit(testResults: 'JunitResults', allowEmptyResults: true, healthScaleFactor: 1)
       }
     }
   }
